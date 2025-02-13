@@ -15,30 +15,19 @@ export const Section = () => {
 
     return (
         <div className="flex w-full h-[100vh] ">
-            <div className="mt-[120px] w-[20%] ">
-                <h5 className=" p-7 text-pink-400">tses</h5>
-                {listNames.map((el, index) => (
-                    <button className="cursor-pointer w-[100%] h-[50px] mt-[20px] gap-7 p-6 flex" key={index}>
-                        <div className="w-[30px] h-[30px]">{el.log}</div>
-                        <p>{el.name}</p>
-                    </button>
-
-                ))}
-            </div>
-            <div className=" mt-[120px] w-[1px] bg-black"></div>
-            <div className=" mt-[120px] w-[70%]">
-                <div className="flex">
-                <div>
-              <div className="w-[1040px] m-7 h-[400px] bg-black"></div>
+            <div className=" mt-[120px] w-full">
+                <div className="flex justify-between">
+                <div className="w-[60%]">
+              <div className="w-[93%] m-7 h-[40%] bg-black"></div>
                 <h2 className="m-7">zahiulga</h2>
-                <div className="m-7 flex gap-10">
-                    <div className="w-[500px] h-[100px] bg-pink-400"></div>
-                    <div className="w-[500px] h-[100px] bg-pink-400"></div>
+                <div className="flex m-auto ml-7 gap-10">
+                    <div className="w-full h-[100px] bg-pink-400"></div>
+                    <div className="w-full h-[100px] bg-pink-400"></div>
                 </div>
                 </div>
-                <div className="m-7">
-                    <div className="w-[500px] h-[200px] bg-black"></div>
-                    <div className="w-[500px] h-[200px] mt-10 bg-black"></div>
+                <div className="w-[40%] m-7">
+                    <div className="w-full h-[200px] bg-black"></div>
+                    <div className="w-full h-[200px] mt-10 bg-black"></div>
                 </div>
                 </div>
 

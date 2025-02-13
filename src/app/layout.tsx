@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./component/Header";
 import { ThemeProvider } from "next-themes";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/app/component/App-sidebar"
 
 
 const geistSans = Geist({
@@ -26,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
       <ThemeProvider
             attribute="class"
@@ -38,9 +40,13 @@ export default function RootLayout({
 
 <Header />
         {children}
+        <SidebarProvider>
+      <AppSidebar />
+      <main>
+        <SidebarTrigger />
+      </main>
+    </SidebarProvider>
           </ThemeProvider>
-
-
       </body>
     </html>
   );
