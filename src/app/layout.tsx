@@ -30,23 +30,34 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem={true}
-            disableTransitionOnChange
-            storageKey="theme"
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+          disableTransitionOnChange
+          storageKey="theme"
+        >
+          <SidebarProvider>
+            <Header />
+            <div className="flex max-w-full">
 
-<Header />
-        {children}
-        <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
-      </main>
-    </SidebarProvider>
-          </ThemeProvider>
+
+              <AppSidebar />
+
+              <div className="w-screen mt-[100px] min-h-[calc(100vh-120px)]" >
+                {children}</div>
+
+            </div>
+          </SidebarProvider>
+
+
+          {/* <SidebarProvider>
+            <AppSidebar />
+            <main>
+              <SidebarTrigger />
+            </main>
+          </SidebarProvider> */}
+        </ThemeProvider>
       </body>
     </html>
   );

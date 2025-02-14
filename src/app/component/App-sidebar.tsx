@@ -45,7 +45,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-2xl mt-[100px]">Application</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-2xl mt-[50%]">Application</SidebarGroupLabel>
           <SidebarGroupContent className="mt-[30px]">
             <SidebarMenu>
               {items.map((item) => (
