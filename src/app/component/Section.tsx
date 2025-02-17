@@ -4,6 +4,9 @@ import { Car } from 'lucide-react';
 import { MapPinCheckInside } from 'lucide-react';
 import { Inbox } from 'lucide-react';
 import { Headset } from 'lucide-react';
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/app/component/App-sidebar"
+import Header from "./Header";
 
 import {
     Carousel,
@@ -27,11 +30,20 @@ export const Section = () => {
         { ulrOfImage: "image3.jpg" }
     ]
     return (
-        <div className=" w-full h-full bg-green-200 p-10 flex gap-10 ">
+            <SidebarProvider>
+            <Header />
+            <div className="flex max-w-full">
+
+              <AppSidebar />
+
+              <div className="w-screen mt-[100px] min-h-[calc(100vh-120px)]" >
+              <div className=" w-full h-full bg-green-200 p-10 flex gap-10 ">
             <div className="w-[65%] h-full bg-blue-300 shrink-0">fdf</div>
-            <div  className="w-full bg-orange-300">ffd</div>
-            
-        </div>
+            <div  className="w-full bg-orange-300">ffd</div></div>
+            </div>
+
+            </div>
+          </SidebarProvider>
     )
 
 }
